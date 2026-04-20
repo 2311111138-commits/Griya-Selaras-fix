@@ -68,8 +68,8 @@ export default function WhyUs() {
            className="relative"
         >
           <img 
-            src="https://images.unsplash.com/photo-1558273109-60434288ec7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-            alt="Tailoring details" 
+            src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            alt="Handcrafted tailoring detail" 
             className="w-full h-[500px] object-cover rounded-3xl"
             referrerPolicy="no-referrer"
           />

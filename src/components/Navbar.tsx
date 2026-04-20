@@ -10,7 +10,6 @@ export default function Navbar() {
     { name: 'Tentang', href: '#about' },
     { name: 'Layanan', href: '#services' },
     { name: 'Galeri', href: '#gallery' },
-    { name: 'Digitalisasi', href: '#digital' },
   ];
 
   return (

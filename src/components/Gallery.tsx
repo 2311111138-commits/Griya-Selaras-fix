@@ -7,9 +7,9 @@ const gallery = [
     caption: 'Fit yang sempurna dan rapi.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1520006403993-4740f0967d02?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    title: 'Persiapan Bahan',
-    caption: 'Hanya menggunakan material terbaik.'
+    src: 'https://images.unsplash.com/photo-1549439602-43ebca2327af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    title: 'Mesin Jahit Beraksi',
+    caption: 'Proses jahit dengan ketelitian tinggi.'
   },
   {
     src: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
