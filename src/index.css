@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #FDF9ED;
+  --color-brand-primary: #5D3A1A;
+  --color-brand-secondary: #8C6A4D;
+  --color-brand-accent: #B89B72;
+  
+  --font-serif: "Newsreader", serif;
+  --font-sans: "Work Sans", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-bg text-brand-primary font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.oval-mask {
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
