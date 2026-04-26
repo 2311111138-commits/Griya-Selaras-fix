@@ -51,7 +51,7 @@ export default function WhyUs() {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif mb-2">{reason.title}</h4>
-                  <p className="text-sm text-brand-bg/60 line-clamp-2 leading-relaxed">
+                  <p className="text-sm text-brand-bg/60 leading-relaxed">
                     {reason.description}
                   </p>
                 </div>
@@ -68,12 +68,12 @@ export default function WhyUs() {
            className="relative"
         >
           <img 
-            src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            src="https://i.pinimg.com/736x/bd/11/2f/bd112f02e22988dea3cff04c6ae977e5.jpg" 
             alt="Handcrafted tailoring detail" 
-            className="w-full h-[500px] object-cover rounded-3xl"
+            className="w-full h-auto rounded-3xl shadow-2xl relative z-10"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 border border-brand-accent/30 rounded-3xl -translate-x-4 translate-y-4 z-[-1]"></div>
+          <div className="absolute inset-0 border border-brand-accent/30 rounded-3xl -translate-x-4 translate-y-4 z-0"></div>
         </motion.div>
       </div>
     </section>

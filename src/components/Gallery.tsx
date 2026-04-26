@@ -2,32 +2,32 @@ import { motion } from 'motion/react';
 
 const gallery = [
   {
-    src: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: 'https://i.pinimg.com/webp80/736x/86/50/c0/8650c0e53889118b202039244b18581b.webp',
     title: 'Hasil Jadi Kemeja Custom',
     caption: 'Fit yang sempurna dan rapi.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1549439602-43ebca2327af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    title: 'Mesin Jahit Beraksi',
+    src: 'https://i.pinimg.com/736x/7a/ac/d1/7aacd1be522d4d17b7d9c98fe2eacc87.jpg',
+    title: 'Mesin Jahit Berkualitas Baik',
     caption: 'Proses jahit dengan ketelitian tinggi.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: 'https://i.pinimg.com/736x/b5/2f/5f/b52f5feedf303e805fb77f7db149c639.jpg',
     title: 'Detail Jahitan',
     caption: 'Ketelitian di setiap inci kain.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: 'https://i.pinimg.com/webp80/1200x/23/5c/f3/235cf38898268a239a019880d5f7e839.webp',
     title: 'Proses Fitting',
     caption: 'Memastikan kenyamanan maksimal.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: 'https://i.pinimg.com/736x/f5/6e/7e/f56e7e97a127b43f42dfdd61ea95ebe8.jpg',
     title: 'Busana Formal',
     caption: 'Elegan untuk momen spesial Anda.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: 'https://i.pinimg.com/736x/b2/12/de/b212de08ba215931c2ece542413c0cd4.jpg',
     title: 'Detail Kerah',
     caption: 'Aksen presisi yang menawan.'
   }

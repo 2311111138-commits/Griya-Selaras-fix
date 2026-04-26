@@ -11,7 +11,7 @@ export default function Footer() {
               <span className="text-xs uppercase tracking-[0.4em] text-brand-accent font-medium -mt-1">by Syuhada</span>
             </div>
             <p className="text-brand-bg/60 max-w-sm mb-8 leading-relaxed">
-              Premium tailoring and custom attire service in Banyumas. Bringing elegance to your every move through high-end craftsmanship since 2018.
+              Layanan penjahit premium dan busana custom di Banyumas. Menghadirkan keanggunan dalam setiap langkah Anda melalui keahlian jahitan berkualitas tinggi sejak 2018.
             </p>
             <div className="flex gap-4">
               {[Instagram, Facebook].map((Icon, i) => (
@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-4 items-center text-brand-bg/60">
                 <Mail className="w-5 h-5 text-brand-accent shrink-0" />
-                <span className="text-sm">hello@griyaselaras.com</span>
+                <span className="text-sm">griyaselaras.tailor@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -57,11 +57,11 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-brand-bg/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-brand-bg/40 font-medium tracking-widest uppercase">
-            © 2024 Griya Selaras by Syuhada. All Rights Reserved.
+            © 2024 Griya Selaras by Syuhada. Seluruh Hak Cipta Dilindungi.
           </p>
           <div className="flex gap-8 text-[10px] uppercase font-bold tracking-widest text-brand-bg/40">
-            <a href="#" className="hover:text-brand-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-accent transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-brand-accent transition-colors">Kebijakan Privasi</a>
+            <a href="#" className="hover:text-brand-accent transition-colors">Ketentuan Layanan</a>
           </div>
         </div>
       </div>

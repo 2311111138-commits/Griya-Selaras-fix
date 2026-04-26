@@ -12,8 +12,8 @@ export default function About() {
            className="relative"
         >
           <img 
-            src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-            alt="Craftsmanship" 
+            src="https://i.pinimg.com/736x/a0/8c/dd/a08cdd42d1ff3df62a54b978577516eb.jpg" 
+            alt="Peralatan Jahit Profesional" 
             className="w-full aspect-[4/5] object-cover rounded-[100px] shadow-2xl"
             referrerPolicy="no-referrer"
           />

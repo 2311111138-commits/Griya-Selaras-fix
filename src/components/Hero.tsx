@@ -27,7 +27,7 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-secondary text-xs font-bold uppercase tracking-widest mb-6"
           >
-            ESTABLISHED SINCE 2018
+            BERDIRI SEJAK 2018
           </motion.span>
           
           <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8 text-brand-primary">
@@ -70,7 +70,7 @@ export default function Hero() {
             />
             {/* Visual Decoration */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-accent rounded-full flex items-center justify-center text-brand-bg transform rotate-12">
-              <span className="font-serif italic text-lg">Handmade Quality</span>
+              <span className="font-serif italic text-lg">Kualitas Buatan Tangan</span>
             </div>
           </div>
         </motion.div>
