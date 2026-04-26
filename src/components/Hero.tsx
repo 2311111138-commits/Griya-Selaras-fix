@@ -4,15 +4,10 @@ import { ArrowRight } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative h-screen flex items-center overflow-hidden pt-20">
-      {/* Background Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
-          alt="Tailoring Workshop" 
-          className="w-full h-full object-cover opacity-30"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-bg md:via-brand-bg/80 to-transparent"></div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 z-0 bg-brand-bg overflow-hidden">
+        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[70%] bg-brand-accent/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[60%] bg-brand-secondary/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
