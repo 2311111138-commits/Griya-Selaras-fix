@@ -33,7 +33,7 @@ export default function Hero() {
             Menyediakan layanan jahit custom dan permak profesional dengan hasil presisi dan kenyamanan yang sempurna untuk setiap aktivitas Anda.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             <a 
               href="https://wa.me/6285227202129"
               target="_blank"
@@ -43,8 +43,13 @@ export default function Hero() {
               Konsultasi via WhatsApp
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#about" className="text-sm font-bold uppercase tracking-widest border-b-2 border-brand-accent hover:border-brand-primary transition-all pb-1">
-              Kenali Kami Lebih Dekat
+            <a 
+              href="https://maps.app.goo.gl/nrJMZPD7RDEyRtAJA?g_st=iw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-brand-primary text-brand-primary rounded-full font-medium flex items-center justify-center gap-2 hover:bg-brand-primary hover:text-brand-bg transition-all transform hover:-translate-y-1"
+            >
+              Lihat Lokasi
             </a>
           </div>
         </motion.div>

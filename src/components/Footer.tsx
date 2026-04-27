@@ -25,9 +25,16 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-xl mb-8">Kontak</h4>
             <ul className="space-y-6">
-              <li className="flex gap-4 items-start text-brand-bg/60">
-                <MapPin className="w-5 h-5 text-brand-accent shrink-0" />
-                <span className="text-sm">Randegan RT 03/10, Ciarus Kidul, Kelurahan Randegan, Kecamatan Wangon, Kabupaten Banyumas, Jawa Tengah 53176</span>
+              <li className="flex gap-4 items-start text-brand-bg/60 group">
+                <MapPin className="w-5 h-5 text-brand-accent shrink-0 mt-1" />
+                <a 
+                  href="https://maps.app.goo.gl/nrJMZPD7RDEyRtAJA?g_st=iw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-brand-accent transition-colors underline decoration-brand-accent/30 decoration-1 underline-offset-4"
+                >
+                  Jl. Raya Wangon - Lumbir, Randegan, Kec. Wangon, Kabupaten Banyumas, Jawa Tengah 53176
+                </a>
               </li>
               <li className="flex gap-4 items-center text-brand-bg/60">
                 <Phone className="w-5 h-5 text-brand-accent shrink-0" />
