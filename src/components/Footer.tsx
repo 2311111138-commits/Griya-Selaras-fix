@@ -38,11 +38,25 @@ export default function Footer() {
               </li>
               <li className="flex gap-4 items-center text-brand-bg/60">
                 <Phone className="w-5 h-5 text-brand-accent shrink-0" />
-                <span className="text-sm">+62 852-2720-2129</span>
+                <a 
+                  href="https://wa.me/6285227202129" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm hover:text-brand-accent transition-colors"
+                >
+                  +62 852-2720-2129
+                </a>
               </li>
               <li className="flex gap-4 items-center text-brand-bg/60">
                 <Mail className="w-5 h-5 text-brand-accent shrink-0" />
-                <span className="text-sm">griyaselaras.tailor@gmail.com</span>
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=griyaselaras.tailor@gmail.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-brand-accent transition-colors"
+                >
+                  griyaselaras.tailor@gmail.com
+                </a>
               </li>
             </ul>
           </div>
