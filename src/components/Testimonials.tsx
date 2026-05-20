@@ -3,14 +3,14 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Ibu Rahayu',
+    name: 'Ibu Safitri',
     role: 'Pelanggan Setia',
     text: 'Hasil jahitannya sangat rapi dan pas di badan. Saya sudah beberapa kali jahit kebaya di sini, selalu puas dengan detailnya.'
   },
   {
-    name: 'Bapak Ahmad',
-    role: 'Pengusaha Muda',
-    text: 'Layanan permaknya luar biasa. Jas lama saya jadi seperti baru kembali setelah di-resize di Griya Selaras. Sangat direkomendasikan!'
+    name: 'Bapak Ari Nugroho',
+    role: 'PENGUSAHA MUDA (dejarumi)',
+    text: 'Alhamdulillah puas banget pesan baju jahitan dalam jumlah banyak di sini. Hasilnya rapi, ukurannya juga pas, dan sesuai dengan permintaan. Dari awal pesan sampai selesai pelayanannya enak, bisa diajak diskusi, dan pengerjaannya juga tepat waktu. Cocok banget kalau mau pesan seragam atau baju banyak.'
   },
   {
     name: 'Siska',
