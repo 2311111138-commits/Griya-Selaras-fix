@@ -16,17 +16,17 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   {
-    src: 'https://i.pinimg.com/webp80/736x/86/50/c0/8650c0e53889118b202039244b18581b.webp',
-    title: 'Hasil Jadi Kemeja Custom',
+    src: 'https://lh3.googleusercontent.com/d/17BkDYKoDY05avvELoG12ENmYqRQu3LK_',
+    title: 'Hasil Kebaya Custom',
     caption: 'Fit yang sempurna dan rapi.',
     technicalInfo: {
       stitchType: 'Jahitan Stik (Single Needle)',
-      fabric: 'Katun Poplin / Oxford',
-      duration: '3 - 5 Hari Kerja',
+      fabric: 'Brukat / Sifon / Batik Premium',
+      duration: '5 - 7 Hari Kerja',
       highlights: [
-        'Kerah tegak dan kokoh',
-        'Finishing clean-cut tanpa benang sisa',
-        'Pola disesuaikan dengan anatomi tubuh'
+        'Pola tubuh presisi yang menyatu sempurna',
+        'Detail renda & brukat yang rapi dan simetris',
+        'Finishing bersih luar-dalam kelas butik'
       ]
     }
   },
@@ -46,17 +46,17 @@ const galleryItems: GalleryItem[] = [
     }
   },
   {
-    src: 'https://i.pinimg.com/736x/b5/2f/5f/b52f5feedf303e805fb77f7db149c639.jpg',
-    title: 'Detail Jahitan',
-    caption: 'Ketelitian di setiap inci kain.',
+    src: 'https://lh3.googleusercontent.com/d/1u_C15uhhc4nlGTbt2OBDILHoGoDSfPYl',
+    title: 'Seragam Sekolah',
+    caption: 'Kuatan jahit ekstra untuk aktivitas harian anak.',
     technicalInfo: {
-      stitchType: 'Stik Kecil (Precision Stitch)',
-      fabric: 'Wool / Semiwool',
-      duration: 'Pengerjaan Detail 1-2 Jam',
+      stitchType: 'Locked Stitch / Jahit Ganda Presisi',
+      fabric: 'Katun TC / Kain Drill Premium',
+      duration: '3 - 5 Hari Kerja',
       highlights: [
-        'Jarak antar jahitan konsisten',
-        'Kekuatan sambungan terjamin',
-        'Estetika jahitan luar yang mewah'
+        'Sambungan saku dan pundak ekstra kuat',
+        'Bahan adem, menyerap keringat, dan tahan lama',
+        'Pola potongan standar nasional yang nyaman bergerak'
       ]
     }
   },
