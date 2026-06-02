@@ -15,17 +15,17 @@ interface ServiceItem {
 
 const services: ServiceItem[] = [
   {
-    title: 'Permak Kaos',
-    description: 'Perbaikan ukuran atau model kaos agar lebih pas dan nyaman dipakai.',
-    price: 'Rp10.000',
+    title: 'Permak Pakaian',
+    description: 'Perbaikan ukuran, rombak model, pengecilan, atau modifikasi segala jenis pakaian agar fit dan elegan saat dikenakan.',
+    price: 'Rp15.000',
     estimate: '1 - 2 Hari',
     icon: <Shirt className="w-5 h-5" />,
     image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80',
     highlights: [
-      'Jahitan overdeck presisi kelas distro',
-      'Pemotongan rapi agar kaos tidak melintir',
-      'Benang jahit premium yang kuat & elastis',
-      'Finishing strika uap rapi'
+      'Penyesuaian ukuran tubuh (alteration) secara presisi',
+      'Rombak model pakaian lama menjadi gaya baru yang modern',
+      'Teknik pemotongan kain berpola rapi agar jatuhnya proporsional',
+      'Finishing jahitan halus dan kuat berstandar butik'
     ]
   },
   {
