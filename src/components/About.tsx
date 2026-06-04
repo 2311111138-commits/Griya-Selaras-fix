@@ -43,11 +43,11 @@ export default function About() {
           {/* Elegant Stats */}
           <div className="mt-12 grid grid-cols-2 gap-8 pt-8 border-t border-[#DCCDBD]/40">
             <div>
-              <span className="block text-4xl font-serif text-[#4A3A30] font-medium mb-1.5">8+ Tahun</span>
+              <span className="block text-4xl font-serif text-[#4A3A30] font-medium mb-1.5">5+ Tahun</span>
               <span className="text-[10px] uppercase tracking-widest text-[#7B6F66] font-bold block">Pengalaman Berkarya</span>
             </div>
             <div>
-              <span className="block text-4xl font-serif text-[#4A3A30] font-medium mb-1.5">1.500+</span>
+              <span className="block text-4xl font-serif text-[#4A3A30] font-medium mb-1.5">1.000+</span>
               <span className="text-[10px] uppercase tracking-widest text-[#7B6F66] font-bold block">Karya Busana Presisi</span>
             </div>
           </div>

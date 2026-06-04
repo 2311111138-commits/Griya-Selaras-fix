@@ -50,12 +50,12 @@ export default function Footer() {
               <li className="flex gap-4 items-center text-brand-bg/60">
                 <Mail className="w-5 h-5 text-brand-accent shrink-0" />
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=griyaselaras.tailor@gmail.com" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=griyaselaraskerja@gmail.com" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm hover:text-brand-accent transition-colors"
                 >
-                  griyaselaras.tailor@gmail.com
+                  griyaselaraskerja@gmail.com
                 </a>
               </li>
             </ul>
