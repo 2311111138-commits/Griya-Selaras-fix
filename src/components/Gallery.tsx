@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronLeft, ChevronRight, Sparkles, Scissors, Info, Layers } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Sparkles, Scissors, Info, Layers, MessageCircle, ArrowRight } from 'lucide-react';
 
 interface GalleryItem {
   id: number;
@@ -194,27 +194,24 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* EDITORIAL REFINED HEADER */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 relative z-10">
-          <div className="max-w-2xl">
-            {/* Elegant luxury tag with Olive & Gold combination */}
-            <div className="inline-flex items-center gap-2.5 mb-6">
-              <span className="h-[1px] w-6 bg-[#7A4A1D]"></span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#7A4A1D] flex items-center gap-1.5 font-sans">
-                <Sparkles className="w-3.5 h-3.5 pb-0.5 text-[#B89B72]" /> GALERI KARYA KAMI
-              </span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-serif text-[#5D3A1A] leading-tight tracking-tight font-light">
-              Portofolio Hasil Jahitan & <br />
-              <span className="italic font-normal text-[#8C6A4D]">Apresiasi Kualitas Presisi</span>
-            </h2>
+        <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
+          {/* Elegant luxury tag with Olive & Gold combination */}
+          <div className="inline-flex items-center gap-2.5 mb-6">
+            <span className="h-[1px] w-6 bg-[#7A4A1D]"></span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#7A4A1D] flex items-center gap-1.5 font-sans">
+              <Sparkles className="w-3.5 h-3.5 pb-0.5 text-[#B89B72]" /> GALERI KARYA KAMI
+            </span>
+            <span className="h-[1px] w-6 bg-[#7A4A1D]"></span>
           </div>
           
-          <div className="max-w-md md:text-right border-l-2 md:border-l-0 md:border-r-2 border-[#B89B72]/30 pl-4 md:pl-0 md:pr-4 py-1">
-            <p className="text-sm text-[#8C6A4D] leading-relaxed font-sans">
-              Lihat berbagai hasil produksi yang telah kami kerjakan untuk brand fashion, UMKM, dan pelanggan kami dengan standar kualitas terbaik.
-            </p>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#5D3A1A] leading-tight tracking-tight font-light mb-6">
+            Portofolio Hasil Jahitan & <br />
+            <span className="italic font-normal text-[#8C6A4D]">Apresiasi Kualitas Presisi</span>
+          </h2>
+          
+          <p className="text-sm text-[#8C6A4D] leading-relaxed font-sans max-w-md mx-auto">
+            Lihat berbagai hasil produksi yang telah kami kerjakan untuk brand fashion, UMKM, dan pelanggan kami dengan standar kualitas terbaik.
+          </p>
         </div>
 
         {/* PINTEREST-INSPIRED LUXURY MASONRY GRID */}
@@ -416,15 +413,31 @@ export default function Gallery() {
                   </div>
                 </div>
 
-                {/* Direct Action Link */}
-                <a
-                  href={`https://wa.me/6285227202129?text=Halo Griya Selaras, saya tertarik melakukan pesanan jahit / modifikasi dengan model referensi: ${currentModalItem.title} (${currentModalItem.category})`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full text-center py-4 bg-[#5D3A1A] hover:bg-[#7A4A1D] text-[#FCFAF7] rounded-full font-bold text-xs uppercase tracking-widest relative z-10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 cursor-pointer"
-                >
-                  Pesan Model Ini via WhatsApp
-                </a>
+                {/* Friendly & Professional WhatsApp Consultation Widget */}
+                <div className="mt-4 p-4 bg-gradient-to-r from-emerald-50 to-teal-50/40 rounded-xl border border-emerald-100/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="relative shrink-0 flex">
+                      <div className="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-[#FCFAF7] shadow-sm shadow-emerald-600/10">
+                        <MessageCircle className="w-5 h-5" />
+                      </div>
+                      <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-[#FCFAF7] rounded-full animate-pulse"></span>
+                    </div>
+                    <div className="text-left">
+                      <p className="text-[10px] font-bold text-emerald-800 tracking-wider uppercase mb-0.5">Tanya Penjahit</p>
+                      <p className="text-xs text-emerald-700 leading-normal font-medium">Online • Fast Response & Ramah</p>
+                    </div>
+                  </div>
+                  
+                  <a 
+                    href={`https://wa.me/6285227202129?text=Halo Griya Selaras, saya tertarik melakukan pesanan jahit / modifikasi dengan model referensi: ${currentModalItem.title} (${currentModalItem.category}).`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-[#FCFAF7] rounded-xl font-bold flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 group/btn text-xs tracking-wider uppercase shrink-0 cursor-pointer"
+                  >
+                    <span>Hubungi Chat</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                </div>
 
               </div>
             </motion.div>

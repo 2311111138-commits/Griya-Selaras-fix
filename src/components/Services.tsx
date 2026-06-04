@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Scissors, Ruler, Shirt, CircleDot, Layers, Briefcase, ArrowRight, ChevronDown, Clock, X, MessageCircle, Check } from 'lucide-react';
+import { Scissors, Ruler, Shirt, CircleDot, Layers, Briefcase, ArrowRight, ChevronDown, Clock, X, MessageCircle, Check, ArrowLeft } from 'lucide-react';
 
 interface ServiceItem {
   title: string;
@@ -120,6 +120,29 @@ export default function Services() {
   const [showAll, setShowAll] = useState(false);
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
+  useEffect(() => {
+    if (selectedService) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedService]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedService(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   // We show the first 3 priority services by default (on a 3-column layout)
   const visibleServices = showAll ? services : services.slice(0, 3);
 
@@ -219,82 +242,103 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Professional Service Detail View Overlay */}
+      {/* Professional Service Detail View Overlay - Premium Right-Side Drawer */}
       <AnimatePresence>
         {selectedService && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 overflow-y-auto bg-[#4A3A30]/80 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex justify-end bg-[#4A3A30]/65 backdrop-blur-md"
             onClick={() => setSelectedService(null)}
           >
+            {/* Right Drawer Element */}
             <motion.div 
-              initial={{ scale: 0.95, y: 15 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 15 }}
-              className="bg-[#FCFAF7] w-full max-w-4xl rounded-[5px] overflow-hidden shadow-2xl relative grid md:grid-cols-2 border border-[#DCCDBD]"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.35, ease: "easeOut" }}
+              className="bg-[#FCFAF7] w-full max-w-full md:max-w-xl lg:max-w-2xl h-full shadow-2xl relative flex flex-col border-l border-[#DCCDBD]/40"
               onClick={(e) => e.stopPropagation()}
             >
-              <button 
-                onClick={() => setSelectedService(null)}
-                className="absolute top-5 right-5 z-20 bg-[#F7F2EA] text-[#4A3A30] hover:bg-[#A25D3B] hover:text-[#FCFAF7] p-2.5 rounded-full hover:scale-105 transition-all outline-none border border-[#DCCDBD]"
-                aria-label="Tutup"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              {/* Sticky Top Header */}
+              <div className="sticky top-0 bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#DCCDBD]/40 z-30 px-6 py-4 flex items-center justify-between">
+                <button 
+                  onClick={() => setSelectedService(null)}
+                  className="flex items-center gap-2 text-xs font-bold text-[#7B6F66] hover:text-[#A25D3B] uppercase tracking-widest transition-colors py-2 px-1 focus:outline-none"
+                  aria-label="Kembali ke Layanan"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>Kembali</span>
+                </button>
 
-              {/* Image Column */}
-              <div className="relative h-[280px] md:h-full bg-[#F7F2EA]">
-                <img 
-                  src={selectedService.image} 
-                  alt={selectedService.title} 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#4A3A30]/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-[#FCFAF7]">
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] bg-[#A25D3B] px-3.5 py-1.5 rounded-md text-[#FCFAF7]">
-                    Premium Quality
+                <div className="text-center select-none hidden sm:block max-w-[200px] md:max-w-sm">
+                  <span className="font-serif text-[#4A3A30] font-bold text-sm tracking-wide truncate block">
+                    {selectedService.title}
                   </span>
                 </div>
+
+                <button 
+                  onClick={() => setSelectedService(null)}
+                  className="p-2.5 text-[#7B6F66] hover:text-[#A25D3B] hover:bg-[#F7F2EA]/85 rounded-full transition-all focus:outline-none"
+                  aria-label="Tutup Detail"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
 
-              {/* Content Information Column */}
-              <div className="p-8 md:p-12 flex flex-col justify-between text-[#7B6F66]">
-                <div>
-                  <span className="text-[10px] font-bold text-[#A25D3B] uppercase tracking-[0.3em] block mb-2">DETAIL LAYANAN</span>
-                  <h3 className="text-3xl font-serif text-[#4A3A30] font-semibold mb-4 tracking-tight">{selectedService.title}</h3>
-                  <p className="text-sm text-[#7B6F66] leading-relaxed mb-6 italic">
-                    {selectedService.description}
-                  </p>
+              {/* Scrollable Body Content */}
+              <div className="flex-1 overflow-y-auto overscroll-behavior-contain">
+                {/* Hero Feature Image */}
+                <div className="relative w-full h-[240px] sm:h-[300px] overflow-hidden bg-[#F7F2EA]">
+                  <img 
+                    src={selectedService.image} 
+                    alt={selectedService.title} 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#4A3A30]/75 via-[#4A3A30]/25 to-transparent" />
+                  <div className="absolute bottom-5 left-6 right-6 text-[#FCFAF7]">
+                    <span className="inline-block text-[9px] font-bold uppercase tracking-[0.25em] bg-[#A25D3B] px-3.5 py-1.5 rounded-[3px] text-[#FCFAF7] mb-2.5 shadow-sm">
+                      Layanan Premium
+                    </span>
+                    <h4 className="text-2xl sm:text-3xl font-serif text-[#FCFAF7] font-semibold leading-tight tracking-tight drop-shadow-sm">
+                      {selectedService.title}
+                    </h4>
+                  </div>
+                </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-6 border-y border-[#DCCDBD]/40 py-5">
-                    <div>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B6F66]/80 block mb-1">Mulai Dari</span>
-                      <span className="text-xl md:text-2xl font-serif text-[#4A3A30] font-bold">{selectedService.price}</span>
+                {/* Main Content Area */}
+                <div className="p-6 sm:p-8 space-y-8">
+                  {/* Service Description */}
+                  <div className="space-y-3">
+                    <h5 className="text-[10px] font-bold text-[#A25D3B] uppercase tracking-[0.25em]">DESKRIPSI LAYANAN</h5>
+                    <p className="text-sm sm:text-base text-[#7B6F66] leading-relaxed">
+                      {selectedService.description}
+                    </p>
+                  </div>
+
+                  {/* Price & Estimation Cards */}
+                  <div className="grid grid-cols-2 gap-4 border-y border-[#DCCDBD]/30 py-6">
+                    <div className="bg-[#FCFAF7] p-4 rounded-xl border border-[#DCCDBD]/25 shadow-none">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#7B6F66]/70 block mb-1">Mulai Dari</span>
+                      <span className="text-lg sm:text-2xl font-serif text-[#A25D3B] font-bold">{selectedService.price}</span>
                     </div>
-                    <div>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B6F66]/80 block mb-1">Estimasi Kerja</span>
-                      <span className="text-sm font-bold text-[#4A3A30] flex items-center gap-1.5 pt-1">
-                        <Clock className="w-4 h-4 text-[#A25D3B]" />
-                        {selectedService.estimate}
+                    <div className="bg-[#FCFAF7] p-4 rounded-xl border border-[#DCCDBD]/25 shadow-none">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#7B6F66]/70 block mb-1">Estimasi Kerja</span>
+                      <span className="text-sm font-bold text-[#4A3A30] flex items-center gap-1.5 mt-0.5">
+                        <Clock className="w-4 h-4 text-[#A25D3B] shrink-0" />
+                        <span>{selectedService.estimate}</span>
                       </span>
                     </div>
                   </div>
 
-                  {selectedService.note && (
-                    <p className="text-xs bg-[#F7F2EA] text-[#4A3A30] px-3.5 py-2.5 rounded-lg border border-[#DCCDBD]/30 mb-6 italic">
-                      * {selectedService.note}
-                    </p>
-                  )}
-
                   {/* Highlights Checklist */}
-                  <div className="mb-8">
-                    <h5 className="text-[11px] font-bold text-[#4A3A30] uppercase tracking-wider mb-3">Keunggulan & Detail Proses:</h5>
-                    <ul className="space-y-2.5">
+                  <div className="space-y-4">
+                    <h5 className="text-[10px] font-bold text-[#A25D3B] uppercase tracking-[0.25em]">Keunggulan & Detail Proses</h5>
+                    <ul className="space-y-3">
                       {selectedService.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2.5 text-xs text-[#7B6F66]">
+                        <li key={idx} className="flex items-start gap-3.5 text-sm text-[#7B6F66] leading-relaxed">
                           <div className="p-0.5 bg-[#A25D3B]/10 rounded text-[#A25D3B] mt-0.5 shrink-0">
                             <Check className="w-3.5 h-3.5" strokeWidth={3} />
                           </div>
@@ -303,19 +347,37 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
-                </div>
 
-                {/* Main WhatsApp Consultation Button */}
-                <a 
-                  href={`https://wa.me/6285227202129?text=Halo Griya Selaras, saya ingin berkonsultasi mengenai detail dan pemesanan layanan: ${selectedService.title}.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-4 bg-[#4A3A30] text-[#FCFAF7] rounded-full font-bold flex items-center justify-center gap-2.5 hover:bg-[#A25D3B] hover:-translate-y-0.5 transition-all duration-300 shadow-md group/btn text-sm tracking-wider uppercase"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>Konsultasi via WhatsApp</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
-                </a>
+
+                </div>
+              </div>
+
+              {/* Sticky Bottom Footer Consultation Container */}
+              <div className="sticky bottom-0 bg-[#FCFAF7]/95 backdrop-blur-md border-t border-[#DCCDBD]/40 p-4 sm:p-5 z-20 shadow-[0_-4px_12px_rgba(74,58,48,0.03)]">
+                <div className="p-4 bg-gradient-to-r from-emerald-50 to-teal-50/40 rounded-xl border border-emerald-100/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="relative shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-[#FCFAF7] shadow-sm shadow-emerald-600/10">
+                        <MessageCircle className="w-5 h-5" />
+                      </div>
+                      <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-[#FCFAF7] rounded-full animate-pulse"></span>
+                    </div>
+                    <div className="text-left">
+                      <p className="text-[10px] font-bold text-emerald-800 tracking-wider uppercase mb-0.5">Tanya Penjahit</p>
+                      <p className="text-xs text-emerald-700 leading-normal font-medium">Online • Fast Response & Ramah</p>
+                    </div>
+                  </div>
+                  
+                  <a 
+                    href={`https://wa.me/6285227202129?text=Halo Griya Selaras, saya ingin berkonsultasi mengenai detail dan pemesanan layanan: ${selectedService.title}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-[#FCFAF7] rounded-xl font-bold flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 group/btn text-xs tracking-wider uppercase shrink-0"
+                  >
+                    <span>Hubungi Chat</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>
