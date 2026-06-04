@@ -85,7 +85,7 @@ export default function WhyUs() {
           className="relative group w-full order-2 lg:order-2"
         >
           {/* Main Photo Wrapper with Hover Zoom */}
-          <div className="w-full aspect-[16/10] overflow-hidden rounded-[24px] shadow-[0_20px_50px_rgba(74,58,48,0.06)] group-hover:shadow-[0_30px_60px_rgba(74,58,48,0.12)] border border-[#DCCDBD]/30 transition-all duration-300">
+          <div className="w-full aspect-[16/10] overflow-hidden rounded-[5px] shadow-[0_20px_50px_rgba(74,58,48,0.06)] group-hover:shadow-[0_30px_60px_rgba(74,58,48,0.12)] border border-[#DCCDBD]/30 transition-all duration-300">
             <img 
               src="https://i.pinimg.com/736x/bd/11/2f/bd112f02e22988dea3cff04c6ae977e5.jpg" 
               alt="Handcrafted tailoring detail" 
@@ -95,7 +95,7 @@ export default function WhyUs() {
           </div>
 
           {/* BACKING GRADIENT LAYER */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#4A3A30]/10 to-transparent rounded-[24px] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#4A3A30]/10 to-transparent rounded-[5px] pointer-events-none" />
 
           {/* FLOATING BADGE 1: ✓ Detail Presisi */}
           <div 

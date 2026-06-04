@@ -20,7 +20,7 @@ const services: ServiceItem[] = [
     price: 'Rp15.000',
     estimate: '1 - 2 Hari',
     icon: <Shirt className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80',
+    image: '/permak_pakaian.png',
     highlights: [
       'Penyesuaian ukuran tubuh (alteration) secara presisi',
       'Rombak model pakaian lama menjadi gaya baru yang modern',
@@ -34,7 +34,7 @@ const services: ServiceItem[] = [
     price: 'Rp15.000',
     estimate: '1 - 2 Hari',
     icon: <Shirt className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&auto=format&fit=crop&q=80',
+    image: '/permak_baju.png',
     highlights: [
       'Penyesuaian lekuk pinggang & bahu presisi',
       'Pembongkaran utuh jahitan lama agar hasil natural',
@@ -48,7 +48,7 @@ const services: ServiceItem[] = [
     price: 'Rp20.000',
     estimate: '1 Hari',
     icon: <Ruler className="w-5 h-5" strokeWidth={1.5} />,
-    image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&auto=format&fit=crop&q=80',
+    image: '/permak_celana.png',
     highlights: [
       'Potong pas sambungan original jeans/denim',
       'Pengecilan pinggang & paha proporsional tanpa kerut',
@@ -62,7 +62,7 @@ const services: ServiceItem[] = [
     price: 'Rp15.000',
     estimate: 'Bisa Ditunggu',
     icon: <CircleDot className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1506152983158-b4a74a01c721?w=600&auto=format&fit=crop&q=80',
+    image: '/tambah_kancing.png',
     highlights: [
       'Pengerjaan lubang kancing otomatis sekelas pabrik',
       'Jahit kancing manual simetris & anti lepas',
@@ -76,7 +76,7 @@ const services: ServiceItem[] = [
     price: 'Rp35.000',
     estimate: '1 - 3 Hari',
     icon: <Layers className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&auto=format&fit=crop&q=80',
+    image: '/permak_gamis.png',
     highlights: [
       'Pemotongan keliling rok gamis presisi & tidak bergulung',
       'Jahit lipat kecil (baby hem) berkualitas butik',
@@ -91,7 +91,7 @@ const services: ServiceItem[] = [
     estimate: '5 - 10 Hari',
     note: 'Harga menyesuaikan model dan bahan',
     icon: <Scissors className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&auto=format&fit=crop&q=80',
+    image: '/custom_pakaian_baru.png',
     highlights: [
       'Pengukuran tubuh detail (custom measurement fit)',
       'Konsultasi desain, pemilihan kain, & gaya bebas',
@@ -106,7 +106,7 @@ const services: ServiceItem[] = [
     estimate: 'Sesuai Kesepakatan',
     note: 'Bisa diskusi untuk harga khusus & jangka panjang',
     icon: <Briefcase className="w-5 h-5" />,
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80',
+    image: '/kerjasama_umkm.png',
     highlights: [
       'Kapasitas produksi bulanan stabil & teratur',
       'Quality Control (QC) ketat dari awal potong hingga packing',
@@ -148,7 +148,7 @@ export default function Services() {
             >
               <div
                 onClick={() => setSelectedService(service)}
-                className="bg-[#FCFAF7] border-2 border-[#DCCDBD] rounded-[24px] overflow-hidden flex flex-col relative transition-all duration-300 hover:-translate-y-1.5 hover:border-[#A25D3B] group h-full cursor-pointer shadow-none"
+                className="bg-[#FCFAF7] border-2 border-[#DCCDBD] rounded-[5px] overflow-hidden flex flex-col relative transition-all duration-300 hover:-translate-y-1.5 hover:border-[#A25D3B] group h-full cursor-pointer shadow-none"
               >
                 {/* Image Area */}
                 <div className="relative w-full h-[220px] overflow-hidden bg-[#F7F2EA]">
@@ -233,7 +233,7 @@ export default function Services() {
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-[#FCFAF7] w-full max-w-4xl rounded-[28px] overflow-hidden shadow-2xl relative grid md:grid-cols-2 border border-[#DCCDBD]"
+              className="bg-[#FCFAF7] w-full max-w-4xl rounded-[5px] overflow-hidden shadow-2xl relative grid md:grid-cols-2 border border-[#DCCDBD]"
               onClick={(e) => e.stopPropagation()}
             >
               <button 

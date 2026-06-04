@@ -14,11 +14,22 @@ export default function Footer() {
               Layanan penjahit premium dan busana custom di Banyumas. Menghadirkan keanggunan dalam setiap langkah Anda melalui keahlian jahitan berkualitas tinggi sejak 2018.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-brand-bg/20 flex items-center justify-center hover:bg-brand-accent hover:border-brand-accent transition-all">
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
+              <a 
+                href="https://www.instagram.com/griya.selaras1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full border border-brand-bg/20 flex items-center justify-center hover:bg-brand-accent hover:border-brand-accent transition-all"
+                title="Kunjungi Instagram Griya Selaras"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full border border-brand-bg/20 flex items-center justify-center hover:bg-brand-accent hover:border-brand-accent transition-all"
+                title="Facebook Griya Selaras"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
